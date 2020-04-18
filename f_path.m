@@ -37,7 +37,7 @@ while kk~=1
 end
 P=P((N+1-k):N);
 
-% Example 2.4
+
 % W=[0,2,8,1,inf,inf,inf,inf;
 % 2,0,6,inf,1,inf,inf,inf;
 % 8,6,0,7,5,1,2,inf;
@@ -46,24 +46,4 @@ P=P((N+1-k):N);
 % inf,inf,1,inf,3,0,4,6;
 % inf,inf,3,9,inf,4,0,3;
 % inf,inf,inf,inf,8,6,3,0];
-
-% Example 2.5
-% W=[0,2,inf,8,inf,inf,inf,inf,inf,inf,inf;
-%     inf,0,inf,6,1,inf,inf,inf,inf,inf,inf;
-%     1,inf,0,inf,inf,inf,9,inf,inf,inf,inf;
-%     inf,inf,7,0,inf,inf,inf,inf,inf,inf,inf;
-%     inf,inf,inf,5,0,inf,inf,inf,1,inf,inf;
-%     inf,inf,inf,1,3,0,4,inf,inf,inf,inf;
-%     inf,inf,inf,2,inf,inf,0,inf,3,1,inf;
-%     inf,inf,inf,inf,2,inf,inf,0,inf,inf,9;
-%     inf,inf,inf,inf,inf,6,inf,7,0,inf,inf;
-%     inf,inf,inf,inf,inf,inf,inf,inf,1,0,1;
-%     inf,inf,inf,inf,inf,inf,inf,inf,2,inf,0]
-
-% Example 2.6
-% W=[0,23,inf,12,inf,6;
-%     23,0,inf,inf,inf,inf;
-%     inf,inf,0,8,inf,inf;
-%     12,inf,8,0,inf,inf;
-%     inf,inf,inf,inf,0,3;
-%     6,inf,inf,inf,3,0]
+%[p,u]=f_path(W)
