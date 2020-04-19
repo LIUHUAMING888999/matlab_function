@@ -1,7 +1,8 @@
- clear
+clear
 close all
 clc
-%% ¼ÓÔØÔ¤ÑµÁ·ÍøÂç
+% é‡‡ç”¨matlab2019ï¼Œå¹¶å®‰è£…Deep Learning Toolbox Model for GoogLeNet Network åŒ…
+%% åŠ è½½é¢„è®­ç»ƒç½‘ç»œ
 net = googlenet;
  
 inputSize = net.Layers(1).InputSize
@@ -10,7 +11,7 @@ classNames = net.Layers(end).ClassNames;
 numClasses = numel(classNames);
 disp(classNames(randperm(numClasses,10)))
  
-%% ¶ÁÈ¡Í¼Ïñ²¢µ÷ÕûÍ¼Ïñ´óĞ¡
+%% è¯»å–å›¾åƒå¹¶è°ƒæ•´å›¾åƒå¤§å°
 I = imread('peppers.png');
 figure
 imshow(I)
@@ -18,7 +19,7 @@ size(I)
 I = imresize(I,inputSize(1:2));
 figure
 imshow(I)
-%% ¶ÔÍ¼Ïñ½øĞĞ·ÖÀà
+%% å¯¹å›¾åƒè¿›è¡Œåˆ†ç±»
 [label,scores] = classify(net,I);
 label
 figure
@@ -26,7 +27,7 @@ subplot(121);
 imshow(I)
 title(string(label) + ", " + num2str(100*scores(classNames == label),3) + "%");
  
-%% ÏÔÊ¾ÅÅÃû¿¿Ç°µÄÔ¤²âÖµ
+%% æ˜¾ç¤ºæ’åé å‰çš„é¢„æµ‹å€¼
 [~,idx] = sort(scores,'descend');
 idx = idx(5:-1:1);
 classNamesTop = net.Layers(end).ClassNames(idx);
